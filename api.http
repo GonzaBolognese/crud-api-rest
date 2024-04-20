@@ -1,0 +1,51 @@
+### Crear un producto
+POST http://localhost:8080/productos/create
+Content-Type: application/json
+
+{
+    "nombre": "Bitcoin",
+    "precio": 2800
+}
+
+###Crear Muchos productos
+
+POST http://localhost:8080/productos/createAll
+Content-Type: application/json
+
+[
+    {
+    "nombre": "Messi",
+    "precio": 2800
+    },
+    {
+    "nombre": "Estetoscopio",
+    "precio": 2800
+    },
+    {
+    "nombre": "Mickey",
+    "precio": 3600
+    },
+    {
+    "nombre": "Señora cara de papa",
+    "precio": 3200
+    },
+    {
+        "nombre": "Gandalf",
+        "precio": 3200
+    }
+]
+
+### Traer todos los productos
+GET http://localhost:8080/productos/all
+
+### Traer producto por ID
+GET http://localhost:8080/productos/11
+
+### Modificar un producto
+PUT http://localhost:8080/productos/8
+Content-Type: application/json
+
+{
+    "nombre": "Robert Galati",
+    "precio": 3000
+}
